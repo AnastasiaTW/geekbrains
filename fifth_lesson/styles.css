@@ -1,0 +1,25 @@
+h3, .table-chessBoard {
+	text-align: center;
+}
+td img {
+	vertical-align: bottom;
+	height: 48px;
+}
+.table-chessBoard {
+	margin: auto;
+	width: 40%;
+	border-collapse: collapse;
+}
+.cell-field {
+	height: 50px;
+	width: 50px;
+	background-color: #fff;
+}
+.black {
+	background-color: #000;
+}
+.brim-lines, .brim-columns {
+	vertical-align: middle;
+	background-color: #fff;
+	color: #777;
+}
