@@ -1,0 +1,36 @@
+<script>
+function splitNumber(number){
+  if (number > 0 && number <= 999) {
+    var c = 10, del;
+    while (number >= c / 10) {
+      del = c / 10;
+      item = (number % c  - number % del) / del;
+      if (del == 1){
+        this.unit = item;
+      }
+      else if (del == 10){
+        this.ten = item;
+      }
+      else if (del == 100){
+        this.hundred = item;
+      }
+      c *= 10;
+    }
+  }
+  else if (number == 0){
+    this.unit = number;
+  }
+  else {
+    console.log("Число не входит в промежуток от 0 до 999");
+		this.unit = null;
+		this.ten = null;
+		this.hundred = null;
+  }
+}
+
+var number=+prompt("Введите число от 0 до 999:");
+var number = new splitNumber(number);
+for (var i in number){
+  console.log(i + ': ' + number[i]);
+}
+</script>
